@@ -29,6 +29,10 @@ const FormWrapper = styled.div`
     line-height: 130%; /* 20.8px */
     margin-bottom: 20px;
   }
+
+  @media screen and (max-width: 800px) {
+    width: 95%;
+  }
 `;
 
 const ImgAndText = styled.div`
@@ -62,11 +66,13 @@ const Links = styled.div`
   }
   margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 10px;
   & > div {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
   }
   div div {
     cursor: pointer;
@@ -110,6 +116,12 @@ const SelectWrapper = styled.div`
       border-radius: 16px;
       border: 1px solid #e3e3e3;
     }
+    @media screen and (max-width:556px) {
+      width: 100%;
+      select{
+        width: 200px;
+      }
+    }
   }
 `;
 
@@ -147,6 +159,7 @@ const Buttons = styled.div`
   display: flex;
   margin-top: 15px;
   flex-wrap: wrap;
+  gap: 10px;
   justify-content: space-between;
   & button:first-child {
     color: var(--Gray, #6e6dbb);
@@ -181,10 +194,10 @@ const Buttons = styled.div`
     font-weight: 500;
     line-height: normal;
     letter-spacing: 1px;
-    border:2px solid transparent;
+    border: 2px solid transparent;
     text-transform: uppercase;
     transition: all 0.5s linear;
-    &:hover{
+    &:hover {
       background-color: transparent;
       color: #5361e4;
       border-color: #5361e4;
